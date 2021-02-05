@@ -63,6 +63,13 @@ module.exports = {
 		// packages
 		// build output is always in dist/packages
 		'@nativescript-adjust': {
+			// @nativescript-adjust/adjust
+			adjust: {
+				build: {
+					script: 'nx run adjust:build.all',
+					description: '@nativescript-adjust/adjust: Build',
+				},
+			},
 			'build-all': {
 				script: 'nx run all:build',
 				description: 'Build all packages',
@@ -73,10 +80,14 @@ module.exports = {
 			description: '_____________  Focus (VS Code supported)  _____________',
 		},
 		focus: {
+			adjust: {
+				script: 'nx run adjust:focus',
+				description: 'Focus on @nativescript-adjust/adjust',
+			},
 			reset: {
 				script: 'nx run all:focus',
 				description: 'Reset Focus',
-			}
+			},
 		},
 		'.....................': {
 			script: `npx cowsay "That's all for now folks ~"`,
