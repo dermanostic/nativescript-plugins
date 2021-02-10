@@ -1,3 +1,9 @@
-import { AdjustCommon } from './common';
+import { AdjustConfig } from '@nativescript-adjust/adjust/adjust-config';
+import { adjust } from '@nativescript-adjust/adjust/adjust';
+import { Event } from '@nativescript-adjust/adjust/event';
 
-export class Adjust extends AdjustCommon {}
+export {
+  AdjustConfig,
+  adjust as Adjust,
+  Event as AdjustEvent,
+}

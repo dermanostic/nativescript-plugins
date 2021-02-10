@@ -1,10 +1,30 @@
 import { Observable, EventData, Page } from '@nativescript/core';
 import { DemoSharedAdjust } from '@demo/shared';
-import {} from '@nativescript-adjust/adjust';
+import { AdjustConfig, Adjust, AdjustEvent } from '@nativescript-adjust/adjust';
 
 export function navigatingTo(args: EventData) {
 	const page = <Page>args.object;
-	page.bindingContext = new DemoModel();
+  const adjustConfig = new AdjustConfig("", AdjustConfig.EnvironmentSandbox);
+
+  adjustConfig.deactivateSKAdNetworkHandling();
+  adjustConfig.setLogLevel(AdjustConfig.LogLevelVerbose);
+
+  Adjust.addSessionCallbackParameter("scpk1", "scpv1");
+  Adjust.addSessionCallbackParameter("scpk2", "scpv2");
+
+  Adjust.requestTrackingAuthorizationWithCompletionHandler((status) => {
+    console.log("Authorization status update");
+    console.log(status)
+  });
+  Adjust.create(adjustConfig);
+  Adjust.trackSubsessionStart();
+
+  const adjustEvent = new AdjustEvent("g3mfiw");
+  adjustEvent.setRevenue(10.0, 'USD');
+
+  Adjust.trackEvent(adjustEvent);
+
+  page.bindingContext = new DemoModel();
 }
 
 export class DemoModel extends DemoSharedAdjust {}
