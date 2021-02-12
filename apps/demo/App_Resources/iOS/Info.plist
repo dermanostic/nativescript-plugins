@@ -38,6 +38,11 @@
 				<true/>
 			</dict>
 		</dict>
+		<dict>
+        		<key>NSAllowsLocalNetworking</key><true/>
+        		<key>NSExceptionMinimumTLSVersion</key><string>TLSv1.2</string>
+        		<key>NSAllowsArbitraryLoads</key><true/>
+        </dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>

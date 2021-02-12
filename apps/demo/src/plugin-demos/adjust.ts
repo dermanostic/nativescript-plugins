@@ -4,7 +4,7 @@ import { AdjustConfig, Adjust, AdjustEvent } from '@nativescript-adjust/adjust';
 
 export function navigatingTo(args: EventData) {
 	const page = <Page>args.object;
-  const adjustConfig = new AdjustConfig("", AdjustConfig.EnvironmentSandbox);
+  const adjustConfig = new AdjustConfig("p304bwp7ojy8", AdjustConfig.EnvironmentSandbox);
 
   adjustConfig.deactivateSKAdNetworkHandling();
   adjustConfig.setLogLevel(AdjustConfig.LogLevelVerbose);
