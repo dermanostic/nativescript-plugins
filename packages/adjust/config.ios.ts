@@ -1,4 +1,4 @@
-export class AdjustConfig {
+export class Config {
   public _adjConfig;
 
   constructor(apiKey: string, environmentSandbox = ADJEnvironmentSandbox, allowSuppressLogLevel =  false) {
