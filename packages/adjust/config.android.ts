@@ -1,3 +1,5 @@
+import { Utils } from '@nativescript/core';
+
 export class Config {
   public _adjConfig;
 
@@ -9,9 +11,9 @@ export class Config {
     }
 
     if(allowSuppressLogLevel) {
-      this._adjConfig = new com.adjust.sdk.AdjustConfig(null, apiKey, environmentSandbox, allowSuppressLogLevel);
+      this._adjConfig = new com.adjust.sdk.AdjustConfig(Utils.android.getApplicationContext(), apiKey, environmentSandbox, allowSuppressLogLevel);
     } else {
-      this._adjConfig = new com.adjust.sdk.AdjustConfig(null, apiKey, environmentSandbox);
+      this._adjConfig = new com.adjust.sdk.AdjustConfig(Utils.android.getApplicationContext(), apiKey, environmentSandbox);
     }
 
     return this._adjConfig;

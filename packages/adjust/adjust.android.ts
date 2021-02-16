@@ -1,5 +1,8 @@
 export const adjust = {
-  create: config => com.adjust.sdk.Adjust.onCreate(config),
+  create: config => {
+    com.adjust.sdk.Adjust.onCreate(config);
+    com.adjust.sdk.Adjust.onResume();
+  },
   addSessionCallbackParameter: (key:string, value:string) => com.adjust.sdk.Adjust.addSessionCallbackParameter(key, value),
   requestTrackingAuthorizationWithCompletionHandler: (callback) => callback(""),
   trackSubsessionStart: () => com.adjust.sdk.Adjust.trackSubsessionStart,
@@ -7,6 +10,6 @@ export const adjust = {
     if (!event.isValid()) {
       return;
     }
-    com.adjust.sdk.Adjust.trackEvent(event)
+    com.adjust.sdk.Adjust.trackEvent(event);
   },
 };

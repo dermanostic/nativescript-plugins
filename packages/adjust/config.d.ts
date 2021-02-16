@@ -1,5 +1,5 @@
 export declare class Config {
-  constructor(apiKey: string, environmentSandbox: string);
+  constructor(apiKey: string, environmentSandbox: string, allowSuppressLogLevel?: boolean);
   setLogLevel(logLevel: string);
   static EnvironmentSandbox;
   static EnvironmentProduction;
