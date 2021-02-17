@@ -4,7 +4,7 @@ This is the Nativescript SDK of Adjust™. You can read more about Adjust™ at 
 
 ## Table of contents
 
-* [Example app](#example-app)
+* [Demo app](#demo-app)
 * [Basic integration](#basic-integration)
    * [Get the SDK](#sdk-get)
    * [Integrate the SDK into your app](#sdk-integrate)
@@ -57,9 +57,9 @@ This is the Nativescript SDK of Adjust™. You can read more about Adjust™ at 
       * [Reattribution via deep links](#deeplinking-reattribution)
 * [License](#license)
 
-## <a id="example-app"></a>Demo app
+## <a id="demo-app"></a>Demo app
 
-There is an example app inside the [`apps/demo` directory][demo].
+There is an example app inside the [`../../apps/demo` directory][demo].
 
 ## <a id="basic-integration"></a>Basic integration
 
