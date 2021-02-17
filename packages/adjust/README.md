@@ -59,7 +59,7 @@ This is the Nativescript SDK of Adjust™. You can read more about Adjust™ at 
 
 ## <a id="demo-app"></a>Demo app
 
-There is an example app inside the [`../../../../apps/demo` directory][demo].
+There is an example app inside the `apps/demo` directory.
 
 ## <a id="basic-integration"></a>Basic integration
 
