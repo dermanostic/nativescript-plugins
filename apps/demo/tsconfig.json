@@ -13,7 +13,7 @@
       "@demo/shared": [
         "../../tools/demo/index.ts"
       ],
-      "@nativescript-adjust/*": [
+      "@nativescript-plugins/*": [
         "../../packages/*"
       ]
     }

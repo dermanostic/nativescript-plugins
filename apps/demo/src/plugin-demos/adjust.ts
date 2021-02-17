@@ -1,10 +1,10 @@
 import { Observable, EventData, Page } from '@nativescript/core';
 import { DemoSharedAdjust } from '@demo/shared';
-import { AdjustConfig, Adjust, AdjustEvent } from '@nativescript-adjust/adjust';
+import { AdjustConfig, Adjust, AdjustEvent } from '@nativescript-plugins/adjust';
 
 export function navigatingTo(args: EventData) {
 	const page = <Page>args.object;
-  const adjustConfig = new AdjustConfig("agr7cpd5h8g0", AdjustConfig.EnvironmentSandbox, true);
+  const adjustConfig = new AdjustConfig("agr7cpd5h8g0", AdjustConfig.EnvironmentSandbox);
   adjustConfig.setLogLevel(AdjustConfig.LogLevelVerbose);
 
   Adjust.addSessionCallbackParameter("scpk1", "scpv1");

@@ -6,7 +6,7 @@
 	"dependencies": {
 		"nativescript-theme-core": "file:../../node_modules/nativescript-theme-core",
 		"@nativescript/core": "file:../../node_modules/@nativescript/core",
-		"@nativescript-adjust/adjust": "file:../../packages/adjust"
+		"@nativescript-plugins/adjust": "file:../../packages/adjust"
 	},
 	"devDependencies": {
 		"@nativescript/android": "7.0.1",

@@ -1,6 +1,6 @@
-import { Config } from '@nativescript-adjust/adjust/config';
-import { adjust } from '@nativescript-adjust/adjust/adjust';
-import { Event } from '@nativescript-adjust/adjust/event';
+import { Config } from '@nativescript-plugins/adjust/config';
+import { adjust } from '@nativescript-plugins/adjust/adjust';
+import { Event } from '@nativescript-plugins/adjust/event';
 
 export {
   Config as AdjustConfig,

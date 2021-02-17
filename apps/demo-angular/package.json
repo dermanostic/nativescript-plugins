@@ -15,7 +15,7 @@
 		"reflect-metadata": "file:../../node_modules/reflect-metadata",
 		"rxjs": "file:../../node_modules/rxjs",
 		"zone.js": "file:../../node_modules/zone.js",
-		"@nativescript-adjust/adjust": "file:../../dist/packages/adjust"
+		"@nativescript-plugins/adjust": "file:../../dist/packages/adjust"
 	},
 	"devDependencies": {
 		"@angular/compiler-cli": "file:../../node_modules/@angular/compiler-cli",

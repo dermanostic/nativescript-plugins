@@ -1,11 +1,11 @@
-# @nativescript-adjust/\* plugins
+# @nativescript-plugins/\* plugins
 
 ```
 npm run setup
 npm start
 ```
 
-- @nativescript-adjust/adjust
+- @nativescript-plugins/adjust
 
 # How to use?
 

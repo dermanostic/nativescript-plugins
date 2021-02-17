@@ -57,17 +57,17 @@ module.exports = {
 			},
 		},
 		'⚙️': {
-			script: `npx cowsay "@nativescript-adjust/* packages will keep your ⚙️ cranking"`,
-			description: '_____________  @nativescript-adjust/*  _____________',
+			script: `npx cowsay "@nativescript-plugins/* packages will keep your ⚙️ cranking"`,
+			description: '_____________  @nativescript-plugins/*  _____________',
 		},
 		// packages
 		// build output is always in dist/packages
-		'@nativescript-adjust': {
-			// @nativescript-adjust/adjust
+		'@nativescript-plugins': {
+			// @nativescript-plugins/adjust
 			adjust: {
 				build: {
 					script: 'nx run adjust:build.all',
-					description: '@nativescript-adjust/adjust: Build',
+					description: '@nativescript-plugins/adjust: Build',
 				},
 			},
 			'build-all': {
@@ -82,7 +82,7 @@ module.exports = {
 		focus: {
 			adjust: {
 				script: 'nx run adjust:focus',
-				description: 'Focus on @nativescript-adjust/adjust',
+				description: 'Focus on @nativescript-plugins/adjust',
 			},
 			reset: {
 				script: 'nx run all:focus',
