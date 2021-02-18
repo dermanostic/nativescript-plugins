@@ -1,3 +1,5 @@
+/// <reference path="Adjust.android.d.ts" />
+
 export const adjust = {
   create: config => {
     com.adjust.sdk.Adjust.onCreate(config);

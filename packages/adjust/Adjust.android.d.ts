@@ -12,7 +12,7 @@ declare module com {
           static addSessionCallbackParameter(key, value): void;
           static trackSubsessionStart(): void;
           static trackEvent(event: com.adjust.sdk.AdjustEvent): void;
-          onResume(): void;
+          static onResume(): void;
         }
         class LogLevel {
           static VERBOSE: string;

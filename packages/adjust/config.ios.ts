@@ -1,3 +1,5 @@
+/// <reference path="Adjust.ios.d.ts" />
+
 export class Config {
   public _adjConfig;
 
