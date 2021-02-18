@@ -70,7 +70,7 @@ We will describe the steps to integrate the Adjust SDK into your Nativescript pr
 First, download the library from `npm`:
 
 ```
-$ npm install @nativescript-plugins/adjust --save
+$ npm install @dermanostic/nativescript-adjust --save
 ```
 
 ### <a id="sdk-integrate"></a>Integrate the SDK into your app
@@ -78,7 +78,7 @@ $ npm install @nativescript-plugins/adjust --save
 You should use the following import statement on top of your `.js` file
 
 ```javascript
-import { Adjust, AdjustEvent, AdjustConfig } from '@nativescript-plugins/adjust';
+import { Adjust, AdjustEvent, AdjustConfig } from '@dermanostic/nativescript-adjust';
 ```
 
 In your `App.js` file, add the following code to initialize the Adjust SDK:
@@ -977,7 +977,7 @@ handleDeepLink(event) {
 [adjust.com]:   http://adjust.com
 
 [demo]:      ./apps/demo
-[npm-repo]:     https://www.npmjs.com/package/@nativescript-plugins/adjust
+[npm-repo]:     https://www.npmjs.com/package/@dermanostic/nativescript-adjust
 
 [google-ad-id]:         https://support.google.com/googleplay/android-developer/answer/6048248?hl=en
 [enable-ulinks]:        https://github.com/adjust/ios_sdk#deeplinking-setup-new

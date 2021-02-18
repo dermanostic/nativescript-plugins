@@ -1,5 +1,5 @@
 import { DemoSharedBase } from '../utils';
-import {} from '@nativescript-plugins/adjust';
+import {} from '@dermanostic/nativescript-adjust';
 
 export class DemoSharedAdjust extends DemoSharedBase {
 	testIt() {

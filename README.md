@@ -5,7 +5,7 @@ npm run setup
 npm start
 ```
 
-- @nativescript-plugins/adjust
+- @dermanostic/nativescript-adjust
 
 # How to use?
 

@@ -1,5 +1,5 @@
-import { Config } from '@nativescript-plugins/adjust/config';
-import { Event } from '@nativescript-plugins/adjust/event';
+import { Config } from '@dermanostic/nativescript-adjust/config';
+import { Event } from '@dermanostic/nativescript-adjust/event';
 
 export const adjust = {
   addSessionCallbackParameter(key: string, value: string) {},

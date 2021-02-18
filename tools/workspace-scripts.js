@@ -63,11 +63,11 @@ module.exports = {
 		// packages
 		// build output is always in dist/packages
 		'@nativescript-plugins': {
-			// @nativescript-plugins/adjust
+			// @dermanostic/nativescript-adjust
 			adjust: {
 				build: {
 					script: 'nx run adjust:build.all',
-					description: '@nativescript-plugins/adjust: Build',
+					description: '@dermanostic/nativescript-adjust: Build',
 				},
 			},
 			'build-all': {
@@ -82,7 +82,7 @@ module.exports = {
 		focus: {
 			adjust: {
 				script: 'nx run adjust:focus',
-				description: 'Focus on @nativescript-plugins/adjust',
+				description: 'Focus on @dermanostic/nativescript-adjust',
 			},
 			reset: {
 				script: 'nx run all:focus',

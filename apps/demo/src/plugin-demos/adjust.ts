@@ -1,6 +1,6 @@
 import { Observable, EventData, Page } from '@nativescript/core';
 import { DemoSharedAdjust } from '@demo/shared';
-import { AdjustConfig, Adjust, AdjustEvent } from '@nativescript-plugins/adjust';
+import { AdjustConfig, Adjust, AdjustEvent } from '@dermanostic/nativescript-adjust';
 
 export function navigatingTo(args: EventData) {
 	const page = <Page>args.object;
