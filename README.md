@@ -1,5 +1,9 @@
 # @nativescript-plugins/\* plugins
 
+## Prerequisite
+Install nativescript https://docs.nativescript.org/start/quick-setup
+
+## Step to run all demo
 ```
 npm run setup
 npm start
