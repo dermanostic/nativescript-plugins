@@ -4,8 +4,9 @@ import { AdjustConfig, Adjust, AdjustEvent } from '@dermanostic/nativescript-adj
 
 export function navigatingTo(args: EventData) {
 	const page = <Page>args.object;
-  const adjustConfig = new AdjustConfig("agr7cpd5h8g0", AdjustConfig.EnvironmentSandbox);
+  const adjustConfig = new AdjustConfig("p304bwp7ojy8", AdjustConfig.EnvironmentSandbox);
   adjustConfig.setLogLevel(AdjustConfig.LogLevelVerbose);
+
 
   Adjust.addSessionCallbackParameter("scpk1", "scpv1");
   Adjust.addSessionCallbackParameter("scpk2", "scpv2");
@@ -13,7 +14,7 @@ export function navigatingTo(args: EventData) {
   Adjust.create(adjustConfig);
   Adjust.trackSubsessionStart();
 
-  const adjustEvent = new AdjustEvent("gv2wpy");
+  const adjustEvent = new AdjustEvent("6xocqm");
 
   Adjust.trackEvent(adjustEvent);
 

@@ -15,5 +15,6 @@ export const adjust = {
   requestTrackingAuthorizationWithCompletionHandler: fn => { callback = fn },
   addSessionCallbackParameter: (key:string, value:string) => adjustClient.addSessionCallbackParameterValue(key, value),
   trackSubsessionStart: () =>  adjustClient.trackSubsessionStart(),
-  trackEvent: event => adjustClient.trackEvent(event)
+  trackEvent: event => adjustClient.trackEvent(event),
+  appWillOpenUrl: url => adjustClient.appWillOpenUrl(url),
 };

@@ -4,6 +4,7 @@ declare class ADJConfig {
   initWithAppTokenEnvironmentAllowSuppressLogLevel(apiKey: string, environmentSandbox: string, allowSuppressLogLevel: boolean);
   deactivateSKAdNetworkHandling(): void;
   logLevel: string;
+  delegate: AdjustDelegate;
 }
 
 declare class Adjust {
@@ -14,6 +15,7 @@ declare class Adjust {
   addSessionCallbackParameterValue(key: string, value: string): void;
   trackSubsessionStart(): void;
   trackEvent(event: ADJEvent): void;
+  appWillOpenUrl(url: URL): void;
 }
 
 declare class ADJEvent {
@@ -31,3 +33,7 @@ declare var ADJLogLevelWarn: string;
 declare var ADJLogLevelError: string;
 declare var ADJLogLevelAssert: string;
 declare var ADJLogLevelSuppress: string;
+
+interface AdjustDelegate {
+  adjustDeeplinkResponse(url: URL): void;
+}

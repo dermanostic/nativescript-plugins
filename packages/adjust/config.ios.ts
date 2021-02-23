@@ -1,9 +1,11 @@
 /// <reference path="Adjust.ios.d.ts" />
+import AdjustDelegateImpl from './Delegate';
 
 export class Config {
   public _adjConfig;
 
   constructor(apiKey: string, environmentSandbox = ADJEnvironmentSandbox, allowSuppressLogLevel =  false) {
+    const delegate = AdjustDelegateImpl.new();
     this._adjConfig = ADJConfig.new();
 
     if(!apiKey) {
@@ -19,6 +21,11 @@ export class Config {
 
     this._adjConfig.setLogLevel = (logLevel) => {
       this._adjConfig.logLevel = logLevel;
+    };
+
+    this._adjConfig.delegate = delegate;
+    this._adjConfig.setDeferredDeeplinkCallbackListener = (callback: any) => {
+      delegate.adjustDeeplinkResponse(callback);
     };
 
     return this._adjConfig;
