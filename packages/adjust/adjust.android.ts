@@ -3,33 +3,45 @@
 import { Utils } from '@nativescript/core';
 
 export const adjust = {
-  create: config => {
-    com.adjust.sdk.Adjust.onCreate(config);
-    com.adjust.sdk.Adjust.onResume();
-  },
-  addSessionCallbackParameter: (key:string, value:string) => com.adjust.sdk.Adjust.addSessionCallbackParameter(key, value),
-  requestTrackingAuthorizationWithCompletionHandler: (callback) => callback(""),
-  trackSubsessionStart: () => com.adjust.sdk.Adjust.trackSubsessionStart,
-  trackEvent: (event) => {
-    if (!event.isValid()) {
-      return;
-    }
-    com.adjust.sdk.Adjust.trackEvent(event);
-  },
-  getAmazonAdId: (callback) => {
-    callback(com.adjust.sdk.Adjust.getAmazonAdId(Utils.android.getApplicationContext()));
-  },
-  getGoogleAdId: (callback) => {
-    com.adjust.sdk.Adjust.getGoogleAdId(Utils.android.getApplicationContext(), new com.adjust.sdk.OnDeviceIdsRead.extend({
-      init():void {
-        return global.__native(this);
-      },
-
-      onGoogleAdIdRead(googleAdId: string): void {
-        callback(googleAdId)
+    create: config => {
+      com.adjust.sdk.Adjust.onCreate(config);
+      com.adjust.sdk.Adjust.onResume();
+    },
+    addSessionCallbackParameter: (key: string, value: string) => com.adjust.sdk.Adjust.addSessionCallbackParameter(key, value),
+    requestTrackingAuthorizationWithCompletionHandler: (callback) => callback(""),
+    trackSubsessionStart: () => com.adjust.sdk.Adjust.trackSubsessionStart,
+    trackEvent: (event) => {
+      if (!event.isValid()) {
+        return;
       }
-    }))
-  },
-  sendFirstPackages:() => com.adjust.sdk.Adjust.sendFirstPackages(),
-  setOfflineMode: (enabled: boolean) => com.adjust.sdk.Adjust.setOfflineMode(enabled)
-};
+      com.adjust.sdk.Adjust.trackEvent(event);
+    },
+    getAmazonAdId: (callback) => {
+      callback(com.adjust.sdk.Adjust.getAmazonAdId(Utils.android.getApplicationContext()));
+    },
+    getGoogleAdId: (callback) => {
+      com.adjust.sdk.Adjust.getGoogleAdId(Utils.android.getApplicationContext(), new (com.adjust.sdk.OnDeviceIdsRead as any).extend({
+        init(): void {
+          return global.__native(this);
+        },
+
+        onGoogleAdIdRead(googleAdId: string): void {
+          callback(googleAdId)
+        }
+      }))
+    },
+    sendFirstPackages: () => com.adjust.sdk.Adjust.sendFirstPackages(),
+    setOfflineMode: (enabled: boolean) => com.adjust.sdk.Adjust.setOfflineMode(enabled),
+    setEnabled: (enabled: boolean) => com.adjust.sdk.Adjust.setEnabled(enabled),
+    isEnabled: (callback) => callback(com.adjust.sdk.Adjust.isEnabled()),
+    setReferrer: (referrer: string) => com.adjust.sdk.Adjust.setReferrer(referrer, Utils.android.getApplicationContext()),
+    setPushToken: (token: string) => com.adjust.sdk.Adjust.setPushToken(token, Utils.android.getApplicationContext()),
+    appWillOpenUrl: (strUrl) => com.adjust.sdk.Adjust.appWillOpenUrl(android.net.Uri.parse(strUrl), Utils.android.getApplicationContext()),
+    trackAdRevenue: (source: string, payload: string) => {
+      try {
+        com.adjust.sdk.Adjust.trackAdRevenue(source, new org.json.JSONObject(payload));
+      } catch (e: unknown) {
+        console.error('Give ad revenue payload is not a valid JSON string');
+      }
+    }
+  };

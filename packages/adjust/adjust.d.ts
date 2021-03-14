@@ -8,4 +8,9 @@ export const adjust = {
   trackSubsessionStart() {},
   trackEvent(event: Event) {},
   setOfflineMode(enabled: boolean){},
+  setEnabled(enabled:boolean){},
+  isEnabled(callback){},
+  setReferrer(referrer: string){},
+  setPushToken(token: string){},
+  trackAdRevenue(source: string, payload: string){},
 };
