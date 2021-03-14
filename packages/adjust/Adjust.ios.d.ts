@@ -16,6 +16,8 @@ declare class Adjust {
   trackSubsessionStart(): void;
   trackEvent(event: ADJEvent): void;
   appWillOpenUrl(url: URL): void;
+  sendFirstPackages(): void;
+  setOfflineMode(isEnabled: boolean): void;
 }
 
 declare class ADJEvent {

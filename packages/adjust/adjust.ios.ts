@@ -17,4 +17,8 @@ export const adjust = {
   trackSubsessionStart: () =>  adjustClient.trackSubsessionStart(),
   trackEvent: event => adjustClient.trackEvent(event),
   appWillOpenUrl: url => adjustClient.appWillOpenUrl(url),
+  getAmazonAdId: callback => callback(""),
+  getGoogleAdId: callback => callback(""),
+  sendFirstPackages: () => adjustClient.sendFirstPackages(),
+  setOfflineMode: (enabled: boolean) => adjustClient.setOfflineMode(enabled)
 };
