@@ -16,6 +16,9 @@ export class Config {
       this._adjConfig = new com.adjust.sdk.AdjustConfig(Utils.android.getApplicationContext(), apiKey, environmentSandbox);
     }
 
+    this._adjConfig.setDeferredDeeplinkCallbackListener = (callback: any) => {
+        return this._adjConfig.setOnDeeplinkResponseListener(callback);
+    };
     return this._adjConfig;
   }
 

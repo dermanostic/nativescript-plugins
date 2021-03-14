@@ -7,4 +7,5 @@ export const adjust = {
   requestTrackingAuthorizationWithCompletionHandler(callback){},
   trackSubsessionStart() {},
   trackEvent(event: Event) {},
+  setOfflineMode(enabled: boolean){},
 };
