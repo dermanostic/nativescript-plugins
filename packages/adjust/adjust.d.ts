@@ -3,6 +3,7 @@ import { Event } from '@dermanostic/nativescript-adjust/event';
 
 export const adjust = {
   addSessionCallbackParameter(key: string, value: string) {},
+  addSessionPartnerParameter(key: string, value: string) {},
   create(config: Config) {},
   requestTrackingAuthorizationWithCompletionHandler(callback){},
   trackSubsessionStart() {},
@@ -13,4 +14,11 @@ export const adjust = {
   setReferrer(referrer: string){},
   setPushToken(token: string){},
   trackAdRevenue(source: string, payload: string){},
+  trackPlayStoreSubscription(subscription){},
+  removeSessionCallbackParameter(key) {},
+  resetSessionCallbackParameters() {},
+  resetSessionPartnerParameters() {},
+  gdprForgetMe() {},
+  disableThirdPartySharing() {},
+  getIdfa(callback) {},
 };

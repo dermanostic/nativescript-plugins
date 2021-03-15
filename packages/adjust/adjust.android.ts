@@ -8,6 +8,7 @@ export const adjust = {
       com.adjust.sdk.Adjust.onResume();
     },
     addSessionCallbackParameter: (key: string, value: string) => com.adjust.sdk.Adjust.addSessionCallbackParameter(key, value),
+    addSessionPartnerParameter: (key: string, value: string) => com.adjust.sdk.Adjust.addSessionPartnerParameter(key, value),
     requestTrackingAuthorizationWithCompletionHandler: (callback) => callback(""),
     trackSubsessionStart: () => com.adjust.sdk.Adjust.trackSubsessionStart,
     trackEvent: (event) => {
@@ -43,5 +44,14 @@ export const adjust = {
       } catch (e: unknown) {
         console.error('Give ad revenue payload is not a valid JSON string');
       }
-    }
-  };
+    },
+    trackPlayStoreSubscription: (subscription: com.adjust.sdk.AdjustPlayStoreSubscription) =>com.adjust.sdk.Adjust.trackPlayStoreSubscription(subscription),
+    removeSessionCallbackParameter: (key:string) => com.adjust.sdk.Adjust.removeSessionCallbackParameter(key),
+    removeSessionPartnerParameter: (key:string) => com.adjust.sdk.Adjust.removeSessionPartnerParameter(key),
+    resetSessionCallbackParameters: () => com.adjust.sdk.Adjust.resetSessionCallbackParameters(),
+    resetSessionPartnerParameters: () => com.adjust.sdk.Adjust.resetSessionPartnerParameters(),
+    gdprForgetMe: () => com.adjust.sdk.Adjust.gdprForgetMe(Utils.android.getApplicationContext()),
+    disableThirdPartySharing: () => com.adjust.sdk.Adjust.disableThirdPartySharing(Utils.android.getApplicationContext()),
+    getIdfa: (callback) => callback("")
+
+};

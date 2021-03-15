@@ -11,6 +11,7 @@ declare module com {
         class Adjust {
           static onCreate(config: com.adjust.sdk.AdjustConfig): void;
           static addSessionCallbackParameter(key, value): void;
+          static addSessionPartnerParameter(key, value): void;
           static trackSubsessionStart(): void;
           static trackEvent(event: com.adjust.sdk.AdjustEvent): void;
           static onResume(): void;
@@ -24,6 +25,13 @@ declare module com {
           static setPushToken(token: string, context: android.content.Context): void;
           static appWillOpenUrl(url: android.net.Uri, context: android.content.Context): void;
           static trackAdRevenue(source: string, payload: org.json.JSONObject): void;
+          static trackPlayStoreSubscription(subscription: com.adjust.sdk.AdjustPlayStoreSubscription): void;
+          static removeSessionCallbackParameter(key: string): void;
+          static removeSessionPartnerParameter(key: string): void;
+          static resetSessionCallbackParameters(): void;
+          static resetSessionPartnerParameters(): void;
+          static gdprForgetMe(context: android.context.Context): void;
+          static disableThirdPartySharing(context: android.context.Context): void;
         }
         class LogLevel {
           static VERBOSE: string;
@@ -40,6 +48,9 @@ declare module com {
         }
         module OnDeviceIdsRead {
           export function extend(context:any);
+        }
+        class AdjustPlayStoreSubscription {
+          constructor(price: Long, currency: string, sku: string, orderId: string, signature: string, purchaseToken: string)
         }
       }
     }
