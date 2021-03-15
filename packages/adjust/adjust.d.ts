@@ -21,4 +21,14 @@ export const adjust = {
   gdprForgetMe() {},
   disableThirdPartySharing() {},
   getIdfa(callback) {},
+  getAdid(callback) {},
+  getAmazonAdId(callback) {},
+  getAttribution(callback) {},
+  getSdkVersion(sdkPrefix: string, callback) {},
+  convertUniversalLink(url: string, scheme: string, callback) {},
+  requestTrackingAuthorizationWithCompletionHandler(callback) {},
+  updateConversionValue(conversionValue) {},
+  getAppTrackingAuthorizationStatus(callback) {},
+  trackThirdPartySharing(thirdPartySharing: com.adjust.sdk.AdjustThirdPartySharing) {},
+  trackMeasurementConsent(measureConsent: boolean) {}
 };

@@ -32,6 +32,12 @@ declare module com {
           static resetSessionPartnerParameters(): void;
           static gdprForgetMe(context: android.context.Context): void;
           static disableThirdPartySharing(context: android.context.Context): void;
+          static getAdid(): void;
+          static getAmazonAdId(context: android.context.Context): void;
+          static getAttribution(): string;
+          static getSdkVersion(): string;
+          static trackThirdPartySharing(thirdPartySharing: com.adjust.sdk.AdjustThirdPartySharing): void;
+          static trackMeasurementConsent(measureConsent: boolean): void;
         }
         class LogLevel {
           static VERBOSE: string;
@@ -51,6 +57,9 @@ declare module com {
         }
         class AdjustPlayStoreSubscription {
           constructor(price: Long, currency: string, sku: string, orderId: string, signature: string, purchaseToken: string)
+        }
+        class AdjustThirdPartySharing {
+          constructor(isEnabled: boolean)
         }
       }
     }
