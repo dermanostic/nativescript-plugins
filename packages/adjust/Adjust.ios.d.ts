@@ -15,13 +15,27 @@ declare class Adjust {
   addSessionCallbackParameterValue(key: string, value: string): void;
   trackSubsessionStart(): void;
   trackEvent(event: ADJEvent): void;
-  appWillOpenUrl(url: URL): void;
+  appWillOpenUrl(url: NSURL): void;
   sendFirstPackages(): void;
   setOfflineMode(isEnabled: boolean): void;
   trackAdRevenuePayload(source: string, payload: NSData): void;
   trackSubscription(subscription: ADJSubscription): void;
   removeSessionCallbackParameter(key: string): void;
   resetSessionCallbackParameters(): void;
+  addSessionPartnerParameterValue(key: string, value: string): void;
+  removeSessionPartnerParameter(key: string): void;
+  resetSessionPartnerParameters(): void;
+  gdprForgetMe(): void;
+  disableThirdPartySharing(): void;
+  updateConversionValue(conversionValue: number) : void;
+  appTrackingAuthorizationStatus(): void;
+  idfa: string | null;
+  adid: string | null;
+  attribution: NSMutableDictionary;
+  static sdkVersion: number;
+  convertUniversalLinkScheme(url: NSURL, scheme: string): void;
+  trackThirdPartySharing(adjustThirdPartySharing: AdjustThirdPartySharing): void;
+  trackMeasurementConsent(measurementConsent: boolean): void;
 }
 
 declare class ADJEvent {
@@ -48,4 +62,9 @@ declare class ADJSubscription {
   static alloc(): ADJSubscription;
   initWithPriceCurrencyTransactionIdAndReceipt(decimalPrice: NSDecimalNumber, currency: string, transactionId: string, receiptValue: NSUTF8StringEncoding): ADJSubscription;
   salesRegion: string;
+}
+
+declare class AdjustThirdPartySharing {
+  static alloc(): AdjustThirdPartySharing;
+  initWithIsEnabledNumberBool(isEnabled: boolean): AdjustThirdPartySharing;
 }
