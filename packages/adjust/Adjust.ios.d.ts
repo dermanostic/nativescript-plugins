@@ -18,6 +18,10 @@ declare class Adjust {
   appWillOpenUrl(url: URL): void;
   sendFirstPackages(): void;
   setOfflineMode(isEnabled: boolean): void;
+  trackAdRevenuePayload(source: string, payload: NSData): void;
+  trackSubscription(subscription: ADJSubscription): void;
+  removeSessionCallbackParameter(key: string): void;
+  resetSessionCallbackParameters(): void;
 }
 
 declare class ADJEvent {
@@ -36,6 +40,12 @@ declare var ADJLogLevelError: string;
 declare var ADJLogLevelAssert: string;
 declare var ADJLogLevelSuppress: string;
 
-interface AdjustDelegate {
+declare class AdjustDelegate {
   adjustDeeplinkResponse(url: URL): void;
+}
+
+declare class ADJSubscription {
+  static alloc(): ADJSubscription;
+  initWithPriceCurrencyTransactionIdAndReceipt(decimalPrice: NSDecimalNumber, currency: string, transactionId: string, receiptValue: NSUTF8StringEncoding): ADJSubscription;
+  salesRegion: string;
 }
