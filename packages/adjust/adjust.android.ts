@@ -54,7 +54,6 @@ export const adjust = {
     disableThirdPartySharing: () => com.adjust.sdk.Adjust.disableThirdPartySharing(Utils.android.getApplicationContext()),
     getIdfa: (callback) => callback(""),
     getAdid: (callback) => callback(com.adjust.sdk.Adjust.getAdid()),
-    getAmazonAdId: (callback) => callback(com.adjust.sdk.Adjust.getAmazonAdId(Utils.android.getApplicationContext())),
     getAttribution: (callback) => callback(JSON.parse(com.adjust.sdk.Adjust.getAttribution())),
     getSdkVersion: (sdkPrefix: string, callback) => {
       const sdkVersion: string = com.adjust.sdk.Adjust.getSdkVersion();
@@ -66,7 +65,6 @@ export const adjust = {
       }
     },
     convertUniversalLink: (url: string, schema: string, callback) => callback(""),
-    requestTrackingAuthorizationWithCompletionHandler: (callback) => callback(""),
     updateConversionValue: () => {},
     getAppTrackingAuthorizationStatus: (callback) => callback("-1"),
     trackThirdPartySharing: (thirdPartySharing: com.adjust.sdk.AdjustThirdPartySharing) => com.adjust.sdk.Adjust.trackThirdPartySharing(thirdPartySharing),
