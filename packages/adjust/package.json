@@ -1,6 +1,6 @@
 {
 	"name": "@dermanostic/nativescript-adjust",
-	"version": "0.1.1",
+	"version": "0.1.3",
 	"description": "Add a plugin description",
 	"main": "index",
 	"typings": "index.d.ts",
