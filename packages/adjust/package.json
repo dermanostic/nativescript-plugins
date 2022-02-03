@@ -1,7 +1,7 @@
 {
 	"name": "@dermanostic/nativescript-adjust",
-	"version": "0.1.9",
-	"description": "Add a plugin description",
+	"version": "0.1.10",
+	"description": "Nativescript plugin for the native iOS/Android Adjust SDKs",
 	"main": "index",
 	"typings": "index.d.ts",
 	"nativescript": {
@@ -12,7 +12,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/NativeScript/plugins.git"
+		"url": "https://github.com/dermanostic/nativescript-plugins/tree/master/packages/adjust"
 	},
 	"keywords": [
 		"NativeScript",
@@ -22,14 +22,14 @@
 		"Android"
 	],
 	"author": {
-		"name": "NativeScript",
-		"email": "oss@nativescript.org"
+		"name": "dermanostic",
+		"email": "info@dermanostic.com"
 	},
 	"bugs": {
-		"url": "https://github.com/NativeScript/plugins/issues"
+		"url": "https://github.com/dermanostic/nativescript-plugins/tree/master/packages/adjust"
 	},
 	"license": "Apache-2.0",
-	"homepage": "https://github.com/NativeScript/plugins",
+	"homepage": "https://github.com/dermanostic/nativescript-plugins/tree/master/packages/adjust",
 	"readmeFilename": "README.md",
 	"bootstrapper": "@nativescript/plugin-seed"
 }
