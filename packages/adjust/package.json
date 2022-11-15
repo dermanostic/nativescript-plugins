@@ -1,6 +1,6 @@
 {
 	"name": "@dermanostic/nativescript-adjust",
-	"version": "0.1.10",
+	"version": "0.1.11",
 	"description": "Nativescript plugin for the native iOS/Android Adjust SDKs",
 	"main": "index",
 	"typings": "index.d.ts",
