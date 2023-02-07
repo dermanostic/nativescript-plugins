@@ -1,35 +1,35 @@
 {
-	"name": "@dermanostic/nativescript-adjust",
-	"version": "0.1.11",
-	"description": "Nativescript plugin for the native iOS/Android Adjust SDKs",
-	"main": "index",
-	"typings": "index.d.ts",
-	"nativescript": {
-		"platforms": {
-			"ios": "6.0.0",
-			"android": "6.0.0"
-		}
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/dermanostic/nativescript-plugins/tree/master/packages/adjust"
-	},
-	"keywords": [
-		"NativeScript",
-		"JavaScript",
-		"TypeScript",
-		"iOS",
-		"Android"
-	],
-	"author": {
-		"name": "dermanostic",
-		"email": "info@dermanostic.com"
-	},
-	"bugs": {
-		"url": "https://github.com/dermanostic/nativescript-plugins/tree/master/packages/adjust"
-	},
-	"license": "Apache-2.0",
-	"homepage": "https://github.com/dermanostic/nativescript-plugins/tree/master/packages/adjust",
-	"readmeFilename": "README.md",
-	"bootstrapper": "@nativescript/plugin-seed"
+  "name": "@dermanostic/nativescript-adjust",
+  "version": "0.2.0",
+  "description": "Nativescript plugin for the native iOS/Android Adjust SDKs",
+  "main": "index",
+  "typings": "index.d.ts",
+  "nativescript": {
+    "platforms": {
+      "ios": "6.0.0",
+      "android": "6.0.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dermanostic/nativescript-plugins/tree/master/packages/adjust"
+  },
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "TypeScript",
+    "iOS",
+    "Android"
+  ],
+  "author": {
+    "name": "dermanostic",
+    "email": "info@dermanostic.com"
+  },
+  "bugs": {
+    "url": "https://github.com/dermanostic/nativescript-plugins/tree/master/packages/adjust"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/dermanostic/nativescript-plugins/tree/master/packages/adjust",
+  "readmeFilename": "README.md",
+  "bootstrapper": "@nativescript/plugin-seed"
 }
